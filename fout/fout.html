@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+        <title>Web Font Fallback Example</title>
+
+		<link href="style.css" type="text/css" rel="stylesheet">
+        <!-- FOR DEMO: including jQuery to handle font toggles -->
+  		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>  
+
+		<script type="text/javascript">
+			// This script modified from Josh Brewer's excellent article on fallback fonts on Typekit's blog: 
+			// http://blog.typekit.com/2011/03/24/type-study-choosing-fallback-fonts/
+			$(document).ready(function() {
+			  // Fallback toggle button
+			  $(".toggle-fallback").click(function(){
+			    $("html").toggleClass("wf-inactive");
+			    $("html").removeClass("wf-active");
+			    $("body").removeClass("font-correct-inactive");
+			    $("#loading-message").addClass("stay-hidden");
+			  });
+			  // Font correct toggle button
+			  $(".toggle-fallback-correct").click(function(){
+			    $("body").toggleClass("font-correct-inactive");
+			  });
+			});
+		</script>
+
+        <!-- NEEDED -->
+		<script type="text/javascript">
+		  WebFontConfig = {
+		    google: { families: [ 'Roboto Slab:700', 'Roboto:400,400italic,700italic,700' ] }
+		  };
+		  (function() {
+		    var wf = document.createElement('script');
+		    wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+		      '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+		    wf.type = 'text/javascript';
+		    wf.async = 'true';
+		    var s = document.getElementsByTagName('script')[0];
+		    s.parentNode.insertBefore(wf, s);
+		  })(); 
+		</script>
+		<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<!-- NEEDED FOR NO JS AVAILABILITY -->
+		<noscript>
+			<!-- Use this in as a fallback to no javascript being available -->
+			<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:700|Roboto:400,400italic,700italic,700' rel='stylesheet' type='text/css'>
+		</noscript>
+    </head>
+
+    <body>
+	<div id="page">
+	<header>
+		<span class="toggle-fallback button">Toggle Fallback (on/off)</span>
+		<span class="toggle-fallback-correct button">Fallback Correction (on/off)</span>
+		<h1>Web Font Fallback Test Page</h1>
+		<!-- the message below will only show while the fonts are loading -->
+		<div id="loading-message">(web fonts loading)</div>
+	</header>
+	<div id="main">
+    <section>
+<h2>Excerpt from Moby Dick</h2>
+<h3>by Herman Melville</h3>
+<p>&#8220;Let the owners stand on Nantucket beach and outyell the Typhoons. What cares Ahab? Owners, owners? Thou art always prating to me, Starbuck, about those miserly owners, as if the owners were my conscience. But look ye, the only real owner of anything is its commander; and hark ye, my conscience is in this ship's keel.&mdash;On deck!&#8221;</p>
+
+<p>&#8220;Captain Ahab,&#8221; said the reddening mate, moving further into the cabin, with a daring so strangely respectful and cautious that it almost seemed not only every way seeking to avoid the slightest outward manifestation of itself, but within also seemed more than half distrustful of itself; &#8220;A better man than I might well pass over in thee what he would quickly enough resent in a younger man; aye, and in a happier, Captain Ahab.&#8221;</p>
+
+<p>&#8220;Devils! Dost thou then so much as dare to critically think of me?&mdash;On deck!&#8221;</p>
+
+<p>&#8220;Nay, sir, not yet; I do entreat. And I do dare, sir&mdash;to be forbearing! Shall we not understand each other better than hitherto, Captain Ahab?&#8221;</p>
+
+<p>Ahab seized a loaded musket from the rack (forming part of most South-Sea-men's cabin furniture), and pointing it towards Starbuck, exclaimed: &#8220;There is one God that is Lord over the earth, and one Captain that is lord over the Pequod.&mdash;On deck!&#8221;</p>
+
+<p>For an instant in the flashing eyes of the mate, and his fiery cheeks, you would have almost thought that he had really received the blaze of the levelled tube. But, mastering his emotion, he half calmly rose, and as he quitted the cabin, paused for an instant and said: &#8220;Thou hast outraged, not insulted me, sir; but for that I ask thee not to beware of Starbuck; thou wouldst but laugh; but let Ahab beware of Ahab; beware of thyself, old man.&#8221;</p>
+
+<p>&#8220;He waxes brave, but nevertheless obeys; most careful bravery that!&#8221; murmured Ahab, as Starbuck disappeared. &#8220;What's that he said&mdash;Ahab beware of Ahab&mdash;there's something there!&#8221; Then unconsciously using the musket for a staff, with an iron brow he paced to and fro in the little cabin; but presently the thick plaits of his forehead relaxed, and returning the gun to the rack, he went to the deck.</p>
+
+<p>&#8220;Thou art but too good a fellow, Starbuck,&#8221; he said lowly to the mate; then raising his voice to the crew: &#8220;Furl the t'gallant-sails, and close-reef the top-sails, fore and aft; back the main-yard; up Burton, and break out in the main-hold.&#8221;</p>
+
+<p>It were perhaps vain to surmise exactly why it was, that as respecting Starbuck, Ahab thus acted. It may have been a flash of honesty in him; or mere prudential policy which, under the circumstance, imperiously forbade the slightest symptom of open disaffection, however transient, in the important chief officer of his ship. However it was, his orders were executed; and the Burtons were hoisted.</p>
+
+<p>Upon searching, it was found that the casks last struck into the hold were perfectly sound, and that the leak must be further off. So, it being calm weather, they broke out deeper and deeper, disturbing the slumbers of the huge ground-tier butts; and from that black midnight sending those gigantic moles into the daylight above. So deep did they go; and so ancient, and corroded, and weedy the aspect of the lowermost puncheons, that you almost looked next for some mouldy corner-stone cask containing coins of Captain Noah, with copies of the posted placards, vainly warning the infatuated old world from the flood. Tierce after tierce, too, of water, and bread, and beef, and shooks of staves, and iron bundles of hoops, were hoisted out, till at last the piled decks were hard to get about; and the hollow hull echoed under foot, as if you were treading over empty catacombs, and reeled and rolled in the sea like an air-freighted demijohn. Top-heavy was the ship as a dinnerless student with all Aristotle in his head. Well was it that the Typhoons did not visit them then.</p>
+    </section>
+    
+    <a href="webfont_fallback_demo.zip"><h3>Download the Demo Files</h3></a>
+    </div>
+	<footer>
+		
+	</footer>
+    </div>
+    </body>
+
+</html>

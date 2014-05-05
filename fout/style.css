@@ -1,0 +1,236 @@
+/* CSS Styles */
+body {
+    font-size: 100%; /* Fixes exaggerated text resizing in IE6 and IE7 */
+}
+
+/* First, supply a complete font stack for wherever you want to do so */
+body, caption, th, td, input, textarea, legend, fieldset {
+	font-family:"Roboto", Helvetica, "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", sans-serif; 
+	font-size: 1em; 
+	letter-spacing: normal;
+	line-height: 1.4em;
+}
+
+h1 {
+	font-family: "Roboto Slab", Garamond, Georgia, "Times New Roman", Times, serif;
+	font-weight: bold; 
+	font-size: 2.5em; 
+	letter-spacing: normal;
+	line-height: 1.2em; 
+	margin: 1em 0 1em 0;
+}
+
+h2 {
+	font-family: "Roboto Slab", Garamond, Georgia, "Times New Roman", Times, serif;
+	font-weight: bold; 
+	font-size: 2em; 
+	letter-spacing: normal;
+	line-height: 1.2em;
+	margin: 1em 0 1em 0;
+}
+
+h3 {
+	font-family: "Roboto Slab", Garamond, Georgia, "Times New Roman", Times, serif;
+	font-weight: bold;
+	font-size: 1.5em;
+	letter-spacing: normal;
+	line-height: 1.2em;
+	margin: 1em 0 1em 0;
+}
+
+
+/* Now supply the same as above, but with the .wf-inactive class added, and without the web fonts specified */
+.wf-inactive body, 
+.wf-inactive caption, 
+.wf-inactive th, 
+.wf-inactive td, 
+.wf-inactive input, 
+.wf-inactive textarea, 
+.wf-inactive legend, 
+.wf-inactive fieldset {
+	font-family: Helvetica, "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", sans-serif; 
+	font-size: 1em; 
+	letter-spacing: 0.0035em; 
+	line-height: 1.4em;
+}
+
+.wf-inactive h1 {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-weight: bold;
+    font-size: 2.5em;
+    letter-spacing: -0.04em; 
+	line-height: 1.05em; 
+	margin: 1.1em 0 1.05em 0;
+}
+
+.wf-inactive h2 {
+	font-family: Garamond, Georgia, "Times New Roman", Times, serif;
+	font-weight: bold; 
+    font-size: 1.9em;
+    letter-spacing: -0.025em; 
+	line-height: 1.1em; 
+	margin: 1.2em 0 .9em 0;
+}
+
+.wf-inactive h3 {
+	font-family: Garamond, Georgia, "Times New Roman", Times, serif;
+	font-weight: bold;
+    font-size: 1.45em;
+    letter-spacing: -0.02em; 
+	line-height: 1.4em; 
+	margin: 1.4em 0 .85em 0;
+}
+
+/* FOR DEMO: These styles show the page without the font corrections  */
+body.font-correct-inactive, 
+.font-correct-inactive caption, 
+.font-correct-inactive th, 
+.font-correct-inactive td, 
+.font-correct-inactive input, 
+.font-correct-inactive textarea, 
+.font-correct-inactive legend, 
+.font-correct-inactive fieldset {
+	font-family: Helvetica, "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", sans-serif; 
+    font-size: inherit;
+    letter-spacing: inherit; 
+	line-height: inherit; 
+	margin: inherit;
+}
+
+.font-correct-inactive h1 {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-weight: bold;
+    font-size: 2.7em;
+    letter-spacing: normal; 
+	line-height: 1.2em; 
+	margin: 1em 0 1em 0;
+}
+
+.font-correct-inactive h2 {
+	font-family: Garamond, Georgia, "Times New Roman", Times, serif;
+	font-weight: bold; 
+	font-size: 2em; 
+	letter-spacing: normal;
+	line-height: 1.2em;
+	margin: 1em 0 1em 0;
+}
+
+.font-correct-inactive h3 {
+	font-family: Garamond, Georgia, "Times New Roman", Times, serif;
+	font-weight: bold;
+	font-size: 1.5em; 
+	letter-spacing: normal;
+	line-height: 1.2em;
+	margin: 1em 0 1em 0;
+}
+
+/* FOR DEMO: Web Font Loading Message */
+#loading-message {
+	position: absolute; 
+	top: 100px; 
+	width: 100%;
+	text-align: center; 
+	font-family: Helvetica, "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", sans-serif;
+	font-weight: bold;
+}
+
+.wf-loading #loading-message {
+	color: #cc0000;
+}
+
+.wf-active #loading-message, 
+#loading-message.stay-hidden {
+	color: #000000; 
+	visibility: hidden;
+}
+
+/* FOR DEMO: Toggle Fallback */
+.button {
+	font-family: Helvetica, "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", sans-serif;
+	font-weight: bold;
+	background: #a1a1a1;
+	display: inline-block;
+	font-size: 13px; 
+	line-height: 25px; 
+	letter-spacing: normal;
+	padding: 5px 10px 4px; 
+	margin-bottom: 10px;
+	float: right; 
+	clear:right;
+	text-transform: uppercase;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+	-webkit-box-shadow: 0 1px 0 rgba(255,255,255,0.1);
+	-moz-box-shadow: 0 1px 0 rgba(255,255,255,0.1);
+	-o-box-shadow: 0 1px 0 rgba(255,255,255,0.1);
+	box-shadow: 0 1px 0 rgba(255,255,255,0.1);
+}
+.button:hover {
+	background: #a9a9a9;
+	cursor: pointer;
+}
+
+.toggle-fallback {
+}
+
+.wf-inactive .toggle-fallback {
+	background: #c5c5c5;
+	-webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.3), 0 1px 0 rgba(255,255,255,0.1);
+	-moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.3), 0 1px 0 rgba(255,255,255,0.1);
+	-o-box-shadow: inset 0 1px 2px rgba(0,0,0,0.3), 0 1px 0 rgba(255,255,255,0.1);
+	box-shadow: inset 0 1px 2px rgba(0,0,0,0.3), 0 1px 0 rgba(255,255,255,0.1);
+}
+
+span.toggle-fallback-correct { 
+	visibility: hidden;
+}
+.wf-inactive span.toggle-fallback-correct { 
+	visibility: visible;
+}
+
+.font-correct-inactive .toggle-fallback-correct {
+	background: #c5c5c5;
+	-webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.3), 0 1px 0 rgba(255,255,255,0.1);
+	-moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.3), 0 1px 0 rgba(255,255,255,0.1);
+	-o-box-shadow: inset 0 1px 2px rgba(0,0,0,0.3), 0 1px 0 rgba(255,255,255,0.1);
+	box-shadow: inset 0 1px 2px rgba(0,0,0,0.3), 0 1px 0 rgba(255,255,255,0.1);
+}
+
+
+/* This is the rest of the CSS for page positioning and style elements - not related to font display */
+
+body {
+	background-image: -moz-linear-gradient(-90deg, #a0a0a0 , #d1d1d1 );
+	background-image: -webkit-gradient(linear, 0 top, 0 bottom, from( #a0a0a0 ), to( #d1d1d1 ));
+	background-image: linear-gradient(top, #a0a0a0, #d1d1d1);
+	background-color: #d1d1d1;
+}
+
+#page {
+	max-width: 960px; 
+	margin: 10px auto 100px auto; 
+	position: relative; 
+	padding: 0px;
+	-webkit-border-bottom-left-radius: 10px;
+	-moz-border-radius-bottomleft: 10px;
+	border-bottom-left-radius: 10px;
+	-webkit-border-bottom-right-radius: 10px;
+	-moz-border-radius-bottomright: 10px;
+	border-bottom-right-radius: 10px;
+	-webkit-box-shadow: 0 1px 10px rgba(0,0,0,0.35);
+	-moz-box-shadow: 0 1px 10px rgba(0,0,0,0.35);
+	-o-box-shadow: 0 1px 10px rgba(0,0,0,0.35);
+	box-shadow: 0 1px 10px rgba(0,0,0,0.35);
+	background-color: #ffffff;
+}
+
+header {
+	background-color: #f1f1f1; 
+	padding: 10px; 
+	display: block;
+}
+#main {
+	padding: 30px;
+}
+
