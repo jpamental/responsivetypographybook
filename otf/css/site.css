@@ -609,6 +609,42 @@ blockquote {
   }
 }
 
+/* Initial Cap styles */
+#main-content p:first-of-type:first-letter,
+#main-content .lt-ie9 #main-content h1 + p:first-letter {
+  font-size: 3em;
+  font-family: "Playfair Display", Georgia, "Times New Roman";
+  font-style: italic;
+  font-weight: normal;
+  line-height: 0.9;
+  display: block;
+  float: left;
+  padding-right: 0.15em;
+  padding-top: 0;
+}
+
+/* Two-column split */
+@media screen and (min-width: 43.75em) {
+  .columns {
+    margin: 0 -5em;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+    -ms-columns: 2;
+    -o-columns: 2;
+    columns: 2;
+  }
+}
+@media screen and (min-width: 81.25em) {
+  .columns {
+    margin: 0;
+    -webkit-columns: 1;
+    -moz-columns: 1;
+    -ms-columns: 1;
+    -o-columns: 1;
+    columns: 1;
+  }
+}
+
 /* IE bits */
 .lt-ie7 #page {
   font-size: 1em;

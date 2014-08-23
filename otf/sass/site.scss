@@ -452,6 +452,33 @@ blockquote.right {
 	}
 }
 
+/* Initial Cap styles */
+#main-content {
+	p:first-of-type:first-letter, 
+	.lt-ie9 #main-content h1 + p:first-letter {
+		font-size: 3em; 
+		font-family: "Playfair Display", Georgia, "Times New Roman";
+		font-style: italic;
+		font-weight: normal;
+		line-height: 0.9; 
+		display: block;
+		float: left; 
+		padding-right: 0.15em; 
+		padding-top: 0;	
+	}
+}
+
+/* Two-column split */
+.columns {
+    @media screen and (min-width: $mq-break-lg_tab) {
+		margin: 0 -5em;
+		@include columns(2);
+	}
+    @media screen and (min-width: $mq-break-lg_desk) {
+    	margin: 0; 
+    	@include columns(1);
+    }
+}
 
 /* IE bits */
 
