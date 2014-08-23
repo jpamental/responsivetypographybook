@@ -425,8 +425,7 @@ blockquote {
     @media screen and (min-width: $mq-break-lg_tab) {
 		font-size: 1.5em; /* 24px / 16px = */
 		line-height: 1.45833333; /* 35px / 24px */
-		width: 50%; 
-		max-width: 11.6666667em; /* 17.5em (or half the max paragraph width) / 1.5 = 11.6666667 */
+		width: 55%; 
 	}
 }
 
@@ -436,7 +435,7 @@ blockquote.left {
 		margin-top: 0.68750001em; /* ((22px / 24px) * 1.5): 1.37500001 - ((22px / 24px) * .75): 0.6875 - compensate for no margin collapse */ 
 		margin-bottom: 0.45833334em; /* (22px / 24px) * .5 */
 		margin-right: .5em;
-		margin-left: -1em;
+		margin-left: -5%;
 		padding-left: .5em; 
 	}
 }
@@ -447,7 +446,7 @@ blockquote.right {
 		margin-top: 0.68750001em; /* ((22px / 24px) * 1.5) / 2 - compensate for no margin collapse with paragraphy above */ 
 		margin-bottom: 0.45833334em; /* (22px / 24px) * .5 */
 		margin-left: .5em;
-		margin-right: -1em;
+		margin-right: -5%;
 		padding-right: 1em; 
 	}
 }
@@ -473,6 +472,7 @@ blockquote.right {
     @media screen and (min-width: $mq-break-lg_tab) {
 		margin: 0 -5em;
 		@include columns(2);
+		@include column-gap(2em);
 	}
     @media screen and (min-width: $mq-break-lg_desk) {
     	margin: 0; 
